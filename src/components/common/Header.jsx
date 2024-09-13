@@ -1,33 +1,38 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import logo from '../../assets/images/logo.svg';
+import home from '../../assets/icons/home.svg';
+import notification from '../../assets/icons/notification.svg';
 
+import avatar from '../../assets/images/avatars/minar.png';
+import Logout from '../auth/Logout';
 const Header = () => {
   return (
-    <nav class='sticky top-0 z-50 border-b border-[#3F3F3F] bg-[#1E1F24] py-4'>
-      <div class='container flex flex-col items-center justify-between gap-6 sm:flex-row'>
-        <a href='./index.html'>
+    <nav className='sticky top-0 z-50 border-b border-[#3F3F3F] bg-[#1E1F24] py-4'>
+      <div className='container flex flex-col items-center justify-between gap-6 sm:flex-row'>
+        <Link to='/'>
           <img
-            class='max-w-[100px] rounded-full lg:max-w-[130px]'
-            src='./assets/images/logo.svg'
+            className='max-w-[100px] rounded-full lg:max-w-[130px]'
+            src={logo}
           />
-        </a>
+        </Link>
 
-        <div class='flex items-center space-x-4'>
-          <a href='./index.html' class='btn-primary'>
-            <img src='./assets/icons/home.svg' alt='Home' />
+        <div className='flex items-center space-x-4'>
+          <Link to='/' className='btn-primary'>
+            <img src={home} alt='Home' />
             Home
-          </a>
-          <button class='icon-btn'>
-            <img src='./assets/icons/notification.svg' alt='Notification' />
-          </button>
-          <button class='icon-btn'>
-            <img src='./assets/icons/logout.svg' alt='Logout' />
+          </Link>
+          <button className='icon-btn'>
+            <img src={notification} alt='Notification' />
           </button>
 
-          <button class='flex-center !ml-8 gap-3'>
-            <span class='text-lg font-medium lg:text-xl'>Sumit</span>
+          <Logout />
+
+          <button className='flex-center !ml-8 gap-3'>
+            <span className='text-lg font-medium lg:text-xl'>Minar</span>
             <img
-              class='max-h-[32px] max-w-[32px] lg:max-h-[44px] lg:max-w-[44px]'
-              src='./assets/images/avatars/avatar_1.png'
+              className='max-h-[32px] max-w-[32px] lg:max-h-[44px] lg:max-w-[44px] rounded-full'
+              src={avatar}
               alt=''
             />
           </button>

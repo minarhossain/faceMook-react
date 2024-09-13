@@ -1,10 +1,12 @@
 import React from 'react';
 import RegistrationForm from '../components/prac/RegistrationForm';
+import Header from '../components/common/Header';
 
 const HomePage = () => {
   return (
     <div>
-      <RegistrationForm />
+      <Header />
+      <p>Home page</p>
     </div>
   );
 };
