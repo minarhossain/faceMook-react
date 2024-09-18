@@ -1,7 +1,7 @@
 import React from 'react';
 
 const ProfilePage = () => {
-  return <div>Registration page</div>;
+  return <div>Profile Page a Aslam</div>;
 };
 
 export default ProfilePage;
