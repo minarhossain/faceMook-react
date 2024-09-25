@@ -61,7 +61,7 @@ const profileReducer = (state, action) => {
         ...state,
         user: {
           ...state.user,
-          image: action.image, // update user's image field
+          avatar: action.data.avatar, // update user's image field
         },
       };
     }

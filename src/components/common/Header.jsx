@@ -42,7 +42,7 @@ const Header = () => {
             <img
               className="max-h-[32px] max-w-[32px] lg:max-h-[44px] lg:max-w-[44px] rounded-full"
               src={`${import.meta.env.VITE_SERVER_BASE_URL}/${user?.avatar}`}
-              alt=""
+              alt={user?.firstName}
             />
           </Link>
         </div>
