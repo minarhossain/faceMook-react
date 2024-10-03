@@ -1,4 +1,4 @@
-import { actions } from "../actions";
+import { actions } from "../actions/index.js";
 
 const initialState = {
   user: null,

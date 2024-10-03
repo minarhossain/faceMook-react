@@ -4,7 +4,7 @@ export const useAvatar = (post) => {
   const { state } = useProfile();
   const { user } = state;
 
-  if (!user) return null;
+  if (!user) return {};
 
   const isMe = post?.author?.id === state?.user?.id;
 
