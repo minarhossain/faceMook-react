@@ -3,13 +3,15 @@ import React, { useEffect, useReducer } from "react";
 // import Header from "../components/common/Header";
 // import { useAuth } from "../hooks/useAuth";
 import { Link } from "react-router-dom";
-import { initialState, postReducer } from "../reducers/PostReducer";
+// import { initialState, postReducer } from "../reducers/PostReducer";
 import useAxios from "../hooks/useAxios";
 import PostList from "../posts/PostList";
 import { actions } from "../actions";
+import { usePost } from "../hooks/usePost";
+import NewPost from "../posts/NewPost";
 
 const HomePage = () => {
-  const [state, dispatch] = useReducer(postReducer, initialState);
+  const { state, dispatch } = usePost();
 
   const { api } = useAxios();
 
@@ -43,6 +45,7 @@ const HomePage = () => {
 
   return (
     <div>
+      <NewPost />
       <PostList posts={state?.posts} />
     </div>
   );
